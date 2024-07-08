@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    Project 1
+    By Mason Zeng
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mental.css">
+    <title>Research Project Mental Perspective</title>
+</head>
+<body>
+    <header>
+        <h1>Mental Perspective</h1>
+    </header>
+
+    <div class="hamburger-menu">
+        <a href="#" onclick="toggleMenu()"><strong>☰ Menu</strong></a>
+    </div>
+
+    <ul id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mental.html">Mental Perspective</a></li>
+        <li><a href="physical.html">Physical Perspective</a></li>
+        <li><a href="financial.html">Financial Perspective</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="forms.html">Response Form</a></li>
+    </ul>
+    <br>
+    <main>
+        <div>
+            <p>A very concerning issue comes from the mental perspective. As a college student, I am a
+                victim to college playing a part in mental degradation. However, it is not just me who is
+                struggling with these issues, essentially all students have experienced at least one of these issues.
+                According to a survey conducted by Healthy Minds Network, over 77% of college students have
+                gone through a mental illness (The Healthy Minds Study, 2023). This is an overwhelmingly high
+                percentage, and it should spark concern. A common cause for this is academic rigor. Personally, I
+                have experienced many nights where the workload feels unbearable which causes me to go
+                through anxiety and burnout. However, I had many peers experience similar symptoms as well
+                overall worsening their mental health.
+                <!-- Flex Container here for an image -->
+            </p>
+            <figure>
+                <img id ="burnt" src="images/burntout-student.jpg" alt="burntout-student">
+                <figcaption>Fig.2 - College Students often feel mentally burntout</figcaption>
+            </figure>
+        </div>
+        <p>
+            A big problem is that this issue is already well known to students and faculty, but not
+            enough is being done to address this problem. A research journal from the National Library of
+            medicine says, “Although many colleges and universities are aware of the significant mental
+            health needs among their students, the mental health and psychosocial needs of students often
+            exceed the availability of resources and cultural and contextual barriers, such as stigma, may
+            further impede access to care.” (Brown et al., 2023). It shows that universities aren’t putting
+            enough effort to help resolve these issues. For example, RIT’s health center is known to have
+            notorious customer service. Being closed on weekends limits access for students seeking care,
+            especially when the weekend is the only time when students don’t have class. There are also
+            many instances where appointments could only be scheduled weeks or even months in advance.
+            Universities having inadequate service can easily be dealt with by putting more time and money
+            into this system.
+            <!-- Flex Container here for an image -->
+        </p>
+    </main>
+    
+    <div id="next-page">
+        <a href="physical.html" class="button">Next Page</a> 
+    </div>
+
+    <div id="previous-page">
+        <a href="index.html" class="button">Previous Page</a> 
+    </div>
+
+    <footer>
+        <p> &copy; 2024 Mason Zeng</p>
+        <p>Back to About Me <a href="http://solace.ist.rit.edu/~mz1498/iste140/">here</a>.</p>
+        <p>Contact me at <a href="mailto:mz1498@rit.edu">email</a>.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav");
+            nav.classList.toggle("active");
+        }
+    
+        function hideHamburgerMenu() {
+            var hamburgerMenu = document.querySelector(".hamburger-menu");
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+            if (screenWidth > 1000) {
+                hamburgerMenu.style.display = "none"; 
+            } else {
+                hamburgerMenu.style.display = "block"; 
+            }
+        }
+    
+        hideHamburgerMenu(); 
+        window.addEventListener("resize", hideHamburgerMenu); 
+    </script>
+</body>
+</html>
+

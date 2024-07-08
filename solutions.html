@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    Project 1
+    By Mason Zeng
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/solutions.css">
+    <title>Research Project Solutions</title>
+</head>
+<body>
+    <header>
+        <h1>Solutions</h1>
+    </header>
+
+    <div class="hamburger-menu">
+        <a href="#" onclick="toggleMenu()"><strong>☰ Menu</strong></a>
+    </div>
+
+    <ul id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mental.html">Mental Perspective</a></li>
+        <li><a href="physical.html">Physical Perspective</a></li>
+        <li><a href="financial.html">Financial Perspective</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="forms.html">Response Form</a></li>
+    </ul>
+    <br>
+    <main>
+        <div>
+            <figure>
+                <img id ="mental" src="images/prioritize.png" alt="prioritize-mentality" width="320" height="180">
+                <figcaption><strong>Fig.5 - Prioritzing mental health!</strong></figcaption>
+            </figure>
+            <p>
+                Addressing the challenges faced by university students requires a multifaceted approach that 
+                encompasses mental, physical, and financial well-being. One potential solution is to prioritize 
+                and invest in comprehensive mental health services on campus. This includes increasing the availability 
+                of counseling and therapy sessions, hiring more mental health professionals, and implementing proactive 
+                mental health education and support programs. By destigmatizing mental health issues and providing 
+                accessible and timely care, universities can better support students in managing stress, anxiety, 
+                and other mental health concerns. Additionally, fostering a supportive and inclusive campus culture 
+                where students feel comfortable seeking help and discussing their mental health struggles can contribute 
+                to overall well-being.
+            </p>
+            <br>
+        </div>
+        <div>
+            <figure>
+                <img id ="physical" src="images/lifestyle.jpg" alt="healthy-lifestyle" width="420" height="235">
+                <figcaption><strong>Fig.6 - Keep a healthy lifestyle! </strong></figcaption>
+            </figure>
+            <p>
+                On the physical perspective, universities can implement initiatives to promote healthy lifestyles and 
+                encourage physical activity among students. This may involve offering free or discounted gym memberships, 
+                organizing fitness classes and recreational activities, and providing resources on nutrition and healthy 
+                living. Creating environments that prioritize physical well-being, such as bike-friendly campuses and 
+                accessible green spaces, can also encourage students to adopt healthier habits. Furthermore, raising 
+                awareness about the negative effects of substance use and providing resources for substance abuse 
+                prevention and intervention can help mitigate the risks associated with unhealthy behaviors.
+            </p>
+        </div>
+        <br>
+        <div>
+            <figure>
+                <img id ="money" src="images/money.jpeg" alt="save-money" width="400" height="242">
+                <figcaption><strong>Fig.7 - Save Money!</strong></figcaption>
+            </figure>
+            <p>
+                From a financial perspective, universities can explore strategies to alleviate the financial burden 
+                on students and make higher education more accessible. This may include increasing financial aid and 
+                scholarship opportunities, freezing or reducing tuition rates, and implementing cost-saving measures
+                for textbooks and other educational materials. Providing financial literacy education and resources 
+                to help students manage their finances effectively can also empower them to make informed decisions 
+                and avoid excessive debt. Additionally, universities can prioritize transparency and accountability 
+                in their financial practices to ensure that resources are allocated efficiently and equitably. By 
+                addressing the root causes of financial stress and promoting financial stability, universities can 
+                support students in achieving their academic and personal goals without being unduly burdened by 
+                financial concerns.
+            </p>
+        </div>
+    </main>
+
+    <div id="next-page">
+        <a href="references.html" class="button">Next Page</a> 
+    </div>
+
+    <div id="previous-page">
+        <a href="financial.html" class="button">Previous Page</a> 
+    </div>
+
+    <footer>
+        <p> &copy; 2024 Mason Zeng</p>
+        <p>Back to About Me <a href="http://solace.ist.rit.edu/~mz1498/iste140/">here</a>.</p>
+        <p>Contact me at <a href="mailto:mz1498@rit.edu">email</a>.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav");
+            nav.classList.toggle("active");
+        }
+    
+        function hideHamburgerMenu() {
+            var hamburgerMenu = document.querySelector(".hamburger-menu");
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+            if (screenWidth > 1000) {
+                hamburgerMenu.style.display = "none"; 
+            } else {
+                hamburgerMenu.style.display = "block"; 
+            }
+        }
+    
+        hideHamburgerMenu(); 
+        window.addEventListener("resize", hideHamburgerMenu); 
+    </script>
+</body>
+</html>
+

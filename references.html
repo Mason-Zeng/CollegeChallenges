@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Project 1
+    By Mason Zeng
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/references.css">
+    <title>Research Project References</title>
+</head>
+<body>
+    <header>
+        <h1>References</h1>
+    </header>
+
+    <div class="hamburger-menu">
+        <a href="#" onclick="toggleMenu()"><strong>☰ Menu</strong></a>
+    </div>
+
+    <ul id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mental.html">Mental Perspective</a></li>
+        <li><a href="physical.html">Physical Perspective</a></li>
+        <li><a href="financial.html">Financial Perspective</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="forms.html">Response Form</a></li>
+    </ul>
+    <br>
+    <main>
+        <ol>
+            <li>Brown, A. D., Ross, N., Sangraula, M., Laing, A., & Kohrt, B. A. (2023). Transforming Mental
+                Healthcare in higher education through Scalable Mental Health Interventions. Cambridge
+                Prisms: Global Mental Health, 10. <a href="https://doi.org/10.1017/gmh.2023.29">https://doi.org/10.1017/gmh.2023.29</a> Retrieved March 6, 2024</li>
+            <li>Healthy Minds Study. Healthy Minds Network. (2023, December 15). <a href="https://healthymindsnetwork.org/hms/">https://healthymindsnetwork.org/hms/</a> Retrieved March 6, 2024</li>
+            <li>Ker, E., & Wood, S. (2023, September 22). A look at 20 years of tuition costs at National
+                Universities. U.S. News & World Report. <a href="https://www.usnews.com/education/best-colleges/paying-for-college/articles/see-20-years-of-tuition-growth-at-national-universities#:~:text=Tuition%20and%20fees%20at%20private,Universities%20soared%20by%20about%20158%25.">https://www.usnews.com/education/bestcolleges/paying-for-college/articles/see-20-years-of-tuition-growth-at-national-universities</a> Retrieved March 5, 2024</li>
+            <li>Lipari, R. N., & Jean-Francois, B. (2016, May 26). Substance Use Facts. A day in the life of
+                college students aged 18 to 22. <a href="https://www.samhsa.gov/data/sites/default/files/report_2361/ShortReport-2361.html">https://www.samhsa.gov/data/sites/default/files/report_2361/ShortReport-2361.html</a> Retrieved March 7, 2024</li>
+            <li>Physical Heath Benefit in college students. Move Well, Live Well. (n.d.). <a href="https://www.walkitscience.org/past-archives-of-knowledge/physical-benefits-of-physicalactivity/physical-health-benefits-in-collegestudents/#:~:text=During%20college%20years%2C%20students%20become,they%20started%20their%20freshman%20year.">https://www.walkitscience.org/past-archives-of-knowledge/physical-benefits-of-physicalactivity/physical-health-benefits-in-collegestudents/#:~:text=During%20college%20years%2C%20students%20become,they%20started%20their%20freshman%20year.</a> Retrieved March 5, 2024</li>
+        </ol>
+    </main>
+
+    <div id="next-page">
+        <a href="forms.html" class="button">Next Page</a> 
+    </div>
+
+    <div id="previous-page">
+        <a href="solutions.html" class="button">Previous Page</a> 
+    </div>
+
+    <footer>
+        <p> &copy; 2024 Mason Zeng</p>
+        <p>Back to About Me <a href="http://solace.ist.rit.edu/~mz1498/iste140/">here</a>.</p>
+        <p>Contact me at <a href="mailto:mz1498@rit.edu">email</a>.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav");
+            nav.classList.toggle("active");
+        }
+    
+        function hideHamburgerMenu() {
+            var hamburgerMenu = document.querySelector(".hamburger-menu");
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+            if (screenWidth > 1000) {
+                hamburgerMenu.style.display = "none"; 
+            } else {
+                hamburgerMenu.style.display = "block"; 
+            }
+        }
+    
+        hideHamburgerMenu(); 
+        window.addEventListener("resize", hideHamburgerMenu); 
+    </script>
+</body>
+</html>

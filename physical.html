@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    Project 1
+    By Mason Zeng
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/physical.css">
+    <title>Research Project Physical Perspective</title>
+</head>
+<body>
+    <header>
+        <h1>Physical Perspective</h1>
+    </header>
+
+    <div class="hamburger-menu">
+        <a href="#" onclick="toggleMenu()"><strong>☰ Menu</strong></a>
+    </div>
+
+    <ul id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mental.html">Mental Perspective</a></li>
+        <li><a href="physical.html">Physical Perspective</a></li>
+        <li><a href="financial.html">Financial Perspective</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="forms.html">Response Form</a></li>
+    </ul>
+    <br>
+    <main>
+        <div>
+            <p> Mental health issues are not the only issues that students face. Physical health is also
+                affected. A core cause of this problem results is the fact that college students have more freedom
+                and usually make decisions on their own. This could shed a positive light as a student may
+                decide to use the university's recreational center to better their physical health. However, a
+                student could also make unideal decisions and negatively impact their physical health. In an
+                article from the organization, WalkItScience, it says, “During college years, students become
+                more sedentary and as their physical activities decrease, their Body Mass Index and weight
+                increases. It's a gradual process, students come out of college significantly less active and
+                heavier compared to when they started their freshman year” (WalkItScience). In most cases,
+                students unfortunately pick the less ideal choice which leads to more sedentary lifestyles making
+                them prone to health diseases such as diabetes. Like the causes of mental health issues, having a
+                greater workload results in a less active lifestyle which is unhealthy. The stress from the
+                workload also weakens the immune system making our bodies prone to health diseases.
+            </p>
+            <figure>
+                <img id ="no-exercise" src="images/no-exercise.jpg" alt="not-exercising">
+                <figcaption>Fig.3 - Students tend to become less active in college</figcaption>
+            </figure>
+        </div>
+            <!-- Flex Container here for an image -->
+        <p> Another consequence of the results of poor decision making is the introduction to
+            substance use. According to this research journal regarding the “day in the life of college
+            students”, it says, “More than one-third of full-time college students aged 18 to 22 engaged in
+            binge drinking in the past month; about 1 in 5 used an illicit drug in the past month.” (Lipari &
+            Jean-Francois, 2016). Utilizing substances is a major detriment to the physical health of students
+            as it damages major organs. Being under the influence of these substances makes students prone
+            to reckless behavior which could further injure their bodies as well.
+        </p>
+            <!-- Flex Container here for an image -->
+    </main>
+
+    <div id="next-page">
+        <a href="financial.html" class="button">Next Page</a> 
+    </div>
+
+    <div id="previous-page">
+        <a href="mental.html" class="button">Previous Page</a> 
+    </div>
+
+    <footer>
+        <p> &copy; 2024 Mason Zeng</p>
+        <p>Back to About Me <a href="http://solace.ist.rit.edu/~mz1498/iste140/">here</a>.</p>
+        <p>Contact me at <a href="mailto:mz1498@rit.edu">email</a>.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav");
+            nav.classList.toggle("active");
+        }
+    
+        function hideHamburgerMenu() {
+            var hamburgerMenu = document.querySelector(".hamburger-menu");
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+            if (screenWidth > 1000) {
+                hamburgerMenu.style.display = "none"; 
+            } else {
+                hamburgerMenu.style.display = "block"; 
+            }
+        }
+    
+        hideHamburgerMenu(); 
+        window.addEventListener("resize", hideHamburgerMenu); 
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,196 @@
+/* Project 1 CSS */
+/* By Mason Zeng */
+
+@media only screen and (min-width: 1025px) {
+    html{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h1 {
+        color: #2B3940;
+        background: #8bcd4a;
+        padding: 20px;
+    }
+    body{
+        background-color: #DCEDC8;
+    }
+
+    #nav {
+        /*
+        list-style-type: none;
+        margin: 0;
+        overflow: hidden;
+        background-color: #333;
+        width: 100%;
+        */
+        list-style-type: none;
+        display: flex;
+        justify-content: center; 
+        margin: 0 auto; /* Center horizontally */
+        overflow: hidden;
+        background-color: #37474f;
+        /*width: fit-content; /* Adjust width to fit content */
+        /*resize: none;*/
+    }
+
+
+    #nav li {
+        float: left;
+    }
+    
+    
+    #nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    #nav li a:hover {
+        background-color: #111;
+    }
+
+    footer {
+        background-color: #c5e1af;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    footer p {
+        margin: 5px;
+    }
+
+    footer a {
+        color: blue;
+    }
+
+    main {
+        max-width: 800px; /* Adjust as needed */
+        margin: 0 auto; /* Center the main content horizontally */
+        text-align: center; /* Center the text within main */
+        display: flex; /* Use flexbox to center content vertically */
+        flex-direction: column; /* Stack children vertically */
+        justify-content: center; /* Center content vertically */
+    }
+
+    #overwhelmed{
+        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        height: 20em;
+        margin: auto; /* Center the image horizontally */
+    }
+
+    #graph{
+        padding-top: 20px;
+    }
+
+
+    #next-page{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+    }
+
+    a.button{
+        width: 100px;
+        height: 40px;
+        border-radius: 12px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    html{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h1 {
+        color: #2B3940;
+        background: #8bcd4a;
+        padding: 20px;
+    }
+    body{
+        background-color: #DCEDC8;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu */
+    }
+
+    #nav {
+        display: none; /* Hide the navigation links by default */
+        list-style-type: none;
+        background-color: #37474f;
+        justify-content: flex-start;
+    }
+
+    #nav.active {
+        display: flex; /* Show the navigation links when active */
+        flex-direction: column; /* Arrange links vertically */
+    }
+
+    #nav li {
+        float: none; /* Remove floating for list items */
+        margin-bottom: 10px; /* Add some space between list items */
+    }
+
+    #nav li a {
+        color: white;
+        text-decoration: none;
+        text-align: left;
+    }
+
+
+    .hamburger-menu a {
+        display: block;
+        color: #2B3940;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    footer {
+        background-color: #c5e1af;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    footer p {
+        margin: 5px;
+    }
+
+    footer a {
+        color: blue;
+    }
+
+    main {
+        max-width: 800px; /* Adjust as needed */
+        margin: 0 auto; /* Center the main content horizontally */
+        text-align: center; /* Center the text within main */
+        display: flex; /* Use flexbox to center content vertically */
+        flex-direction: column; /* Stack children vertically */
+        justify-content: center; /* Center content vertically */
+    }
+
+    #overwhelmed{
+        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        height: 15em;
+        width: 20em;
+        margin: auto; /* Center the image horizontally */
+    }
+
+    #graph{
+        padding-top: 20px;
+    }
+
+
+    #next-page {
+        display: none;
+    }
+
+    a.button{
+        width: 100px;
+        height: 40px;
+        border-radius: 12px;
+    }
+}

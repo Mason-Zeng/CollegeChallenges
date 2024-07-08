@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Project 1
+    By Mason Zeng
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Research Project FeedBack Form</title>
+    <link rel="stylesheet" href="css/forms.css">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Response Form</h1>
+    </header>
+
+    <div class="hamburger-menu">
+        <a href="#" onclick="toggleMenu()"><strong>☰ Menu</strong></a>
+    </div>
+
+    <ul id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mental.html">Mental Perspective</a></li>
+        <li><a href="physical.html">Physical Perspective</a></li>
+        <li><a href="financial.html">Financial Perspective</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="forms.html">Response Form</a></li>
+    </ul>
+    <main>
+        <section id="intro">
+            <h2>Feedback Form</h2>
+            <p>
+                Thank you for visiting this site! Please fill out this form if you have any additional opinions and thoughts about the topic!
+            </p>
+        </section>
+
+        <!-- Enter your HTML code below this line to create the form -->
+        <form action="http://webdevbasics.net/scripts/demo.php" method="post" name="orderForm">
+
+            <!-- You should realize that this is a required input so add 'required'  -->
+            <label class="ar" for="myName">*Name:</label>
+            <input type="text" name="myName" id="myName" required>
+
+            <label class="ar" for="myAddress">Address:</label>
+            <textarea name="myAddress" id="myAddress" rows="2" cols="20" placeholder="Input Address Here"></textarea>
+
+            <!-- You see that this is an email input - should be type="email" -->
+            <label class="ar" for="myEmailAddress">Email Address:</label>
+            <input type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" name="myEmailAddress" id="myEmailAddress" required>
+
+            <!-- You see that this is an phone number input - should be type="tel" -->
+            <label class="ar" for="PhoneNumber">*Phone Number:</label>
+            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="PhoneNumber" id="PhoneNumber" placeholder="111-111-1111" required>
+
+
+            <!-- <label class="ar" for="topping">Toppings</label> 
+                Note that the list of checkboxes are wrapped in a div - block element that 
+                is put on one row on the right
+            -->
+            <p class="p-ar">Challenges</p>
+            <div>
+                <input type="checkbox" id="mental" name="mental" value="Mental">
+                <label for="mental">Mental</label>
+                <br>
+                <input type="checkbox" id="physical" name="physical" value="Physical">
+                <label for="physical">Physical</label>
+                <br>
+                <input type="checkbox" id="financial" name="financial" value="Financial">
+                <label for="financial">Financial</label>
+                <br>
+                <input type="checkbox" id="other" name="other" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <label class="ar" for="responses">Thoughts/Opinions:</label>
+            <textarea name="responses" id="responses" rows="3" cols="50"></textarea>
+
+
+            <label class="ar" for="feedback">Did You like the Website?</label>
+
+            <select size="1" name="feedback" id="feedback">
+                <option value="">Select</option>
+                <option value="Yes">Yes &#128512;</option>
+                <option value="No">No &#128531;</option>
+            </select><br>
+
+            <div id="additionalCommentsContainer">
+                <label class="custom" for="additionalComments">Why?</label>
+                <textarea name="additionalComments" id="additionalComments" rows="3" cols="50"></textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="Submit Order">
+                <input type="reset" value="Clear Order">
+            </div>
+
+        </form>
+
+        <!-- Keep your HTML mark up above this line to create the form -->
+    </main>
+
+    <div id="next-page">
+        <a href="index.html" class="button">Next Page</a>
+    </div>
+
+    <div id="previous-page">
+        <a href="references.html" class="button">Previous Page</a>
+    </div>
+
+    <footer>
+        <p> &copy; 2024 Mason Zeng</p>
+        <p>Back to About Me <a href="http://solace.ist.rit.edu/~mz1498/iste140/">here</a>.</p>
+        <p>Contact me at <a href="mailto:mz1498@rit.edu">email</a>.</p>
+    </footer>
+
+    <script>
+        function toggleAdditionalComments() {
+            var feedbackSelect = document.getElementById("feedback");
+            var additionalCommentsContainer = document.getElementById("additionalCommentsContainer");
+
+            if (feedbackSelect.value === "No") {
+                additionalCommentsContainer.style.display = "grid";
+            } else {
+                additionalCommentsContainer.style.display = "none";
+            }
+        }
+
+        document.getElementById("feedback").addEventListener("change", toggleAdditionalComments);
+        
+        toggleAdditionalComments();
+        
+        function toggleMenu() {
+            var nav = document.getElementById("nav");
+            nav.classList.toggle("active");
+        }
+    
+        function hideHamburgerMenu() {
+            var hamburgerMenu = document.querySelector(".hamburger-menu");
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+            if (screenWidth > 1000) {
+                hamburgerMenu.style.display = "none"; 
+            } else {
+                hamburgerMenu.style.display = "block"; 
+            }
+        }
+    
+        hideHamburgerMenu(); 
+        window.addEventListener("resize", hideHamburgerMenu); 
+    </script>

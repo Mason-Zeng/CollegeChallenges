@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    Project 1
+    By Mason Zeng
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/financial.css">
+    <title>Research Project Financial Perspective</title>
+</head>
+<body>
+    <header>
+        <h1>Financial Perspective</h1>
+    </header>
+
+    <div class="hamburger-menu">
+        <a href="#" onclick="toggleMenu()"><strong>☰ Menu</strong></a>
+    </div>
+    
+    <ul id= "nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mental.html">Mental Perspective</a></li>
+        <li><a href="physical.html">Physical Perspective</a></li>
+        <li><a href="financial.html">Financial Perspective</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="forms.html">Response Form</a></li>
+    </ul>
+    <br>
+    <main>
+        <div>
+            <p> Another common issue regarding college comes from finances. The main perpetrator is
+                the tuition, which in many cases has been a financial burden to the students and their families.
+                An article from U.S. News and World Report states that within the last 20 years, college tuition
+                for private universities has increased by 40% (Kerr & Wood, 2023). This isn't just for private
+                universities but there is a significant upcharge in tuition for public institutions as well. As a
+                result, many students must take loans or even work multiple jobs to afford their education. In
+                many cases, this leads to substantial debt burdens which can last multiple years.
+            </p>
+            <figure>
+                <img id ="graph" src="images/college-tuition.png" alt="overwhelmed-student">
+                <figcaption><strong>Fig.4 - Average Annual Tuition 2004-2024</strong></figcaption>
+            </figure>
+        </div>
+        <p> Tuition isn't the only factor in financial troubles. There are other finances such as room
+            and board, meal plans, and even textbooks. This is a problem because these financial issues can
+            cause the physical and mental health issues that were stated previously. Everyone agrees that
+            college is unfairly overpriced due to institutions mainly focusing on profit rather than the values
+            of education.
+        </p>
+    </main>
+
+    <div id="next-page">
+        <a href="solutions.html" class="button">Next Page</a> 
+    </div>
+
+    <div id="previous-page">
+        <a href="physical.html" class="button">Previous Page</a> 
+    </div>
+
+    <footer>
+        <p> &copy; 2024 Mason Zeng</p>
+        <p>Back to About Me <a href="http://solace.ist.rit.edu/~mz1498/iste140/">here</a>.</p>
+        <p>Contact me at <a href="mailto:mz1498@rit.edu">email</a>.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav");
+            nav.classList.toggle("active");
+        }
+    
+        function hideHamburgerMenu() {
+            var hamburgerMenu = document.querySelector(".hamburger-menu");
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+            if (screenWidth > 1000) {
+                hamburgerMenu.style.display = "none"; 
+            } else {
+                hamburgerMenu.style.display = "block"; 
+            }
+        }
+    
+        hideHamburgerMenu(); 
+        window.addEventListener("resize", hideHamburgerMenu); 
+    </script>
+</body>
+</html>
